@@ -1,0 +1,21 @@
+{
+  "name": "retrieval-augmented-generation",
+  "version": "1.0.0",
+  "description": "A hands on learning repository for understanding and building Retrieval-Augmented Generation (RAG) systems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish2k04/Retrieval-Augmented-Generation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ashish2k04/Retrieval-Augmented-Generation/issues"
+  },
+  "homepage": "https://github.com/Ashish2k04/Retrieval-Augmented-Generation#readme"
+}
