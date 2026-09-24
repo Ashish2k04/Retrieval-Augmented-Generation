@@ -20,7 +20,6 @@
   "homepage": "https://github.com/Ashish2k04/Retrieval-Augmented-Generation#readme",
   "dependencies": {
     "@langchain/community": "^1.1.29",
-    "@langchain/core": "^1.2.12",
-    "pdf-parser": "^1.0.5"
+    "@langchain/core": "^1.2.12"
   }
 }
