@@ -23,6 +23,7 @@
     "@langchain/core": "^1.2.12",
     "@langchain/mistralai": "^1.2.0",
     "@langchain/textsplitters": "^1.0.1",
+    "dotenv": "^18.0.3",
     "pdf-parse": "^2.4.5"
   }
 }
