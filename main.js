@@ -5,7 +5,7 @@ import { MistralAIEmbeddings } from "@langchain/mistralai";
 
 const loader = new PDFLoader("./story.pdf")
 
-const docs = await loader.load()
+const data = await loader.load()
 
 const embeddings = new MistralAIEmbeddings({
    apiKey: process.env.MISTRAL_API_KEY,
@@ -18,7 +18,15 @@ const splitter = new RecursiveCharacterTextSplitter({
 });
 
 const chunks = await splitter.splitText(
-    docs.map((doc) => doc.pageContent).join("\n")
+    data.map((data) => data.pageContent).join("\n")
 )
 
-console.log(chunks)
+const docs = await Promise.all(chunks.map(async (chunk) => {
+ const embedding = await embeddings.embedQuery(chunk);
+ return {
+    text: chunk,
+    embedding
+ }
+}))
+
+console.log(docs)
