@@ -3,7 +3,6 @@ import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from '@langchain/textsplitters';
 import { MistralAIEmbeddings } from "@langchain/mistralai";
 import { Pinecone } from '@pinecone-database/pinecone';
-import { Metadata } from "pdf-parse";
 
 const embeddings = new MistralAIEmbeddings({
    apiKey: process.env.MISTRAL_API_KEY,
