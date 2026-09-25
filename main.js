@@ -6,10 +6,12 @@ const loader = new PDFLoader("./story.pdf")
 const docs = await loader.load()
 
 const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 10,
+    chunkSize: 500,
     chunkOverlap: 0
 });
 
-const chunks = await splitter.splitDocuments(docs)
+const chunks = await splitter.splitText(
+    docs.map((doc) => doc.pageContent).join("\n")
+)
 
 console.log(chunks)
