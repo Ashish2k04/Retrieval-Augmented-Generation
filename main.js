@@ -14,7 +14,7 @@ const splitter = new RecursiveCharacterTextSplitter({
 });
 
 const chunks = await splitter.splitText(
-    data.map((data) => data.pageContent).join("\n")
+    data.map((doc) => doc.pageContent).join("\n")
 )
 
 const embeddings = new MistralAIEmbeddings({
