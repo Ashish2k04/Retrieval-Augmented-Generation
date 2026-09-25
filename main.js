@@ -8,7 +8,8 @@ const loader = new PDFLoader("./story.pdf")
 const docs = await loader.load()
 
 const embeddings = new MistralAIEmbeddings({
-   apiKey: process.env.MISTRAL_API_KEY
+   apiKey: process.env.MISTRAL_API_KEY,
+   model: "mistral-embed"
 })
 
 const splitter = new RecursiveCharacterTextSplitter({
