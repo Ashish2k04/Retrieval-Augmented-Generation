@@ -100,6 +100,13 @@
     p-queue "^6.6.2"
     zod "^3.25.76 || ^4"
 
+"@langchain/mistralai@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/@langchain/mistralai/-/mistralai-1.2.0.tgz"
+  integrity sha512-SRtCSDIBzcQc6ZK5qa1V2ZhqSdZomXOt4VzBWXkD//IYYhbMJHhbrlYuCIuHktwpF/1ME5a7Euyk+BujN9hkTA==
+  dependencies:
+    "@mistralai/mistralai" "2.2.1"
+
 "@langchain/openai@^1.4.1", "@langchain/openai@1.5.13":
   version "1.5.13"
   resolved "https://registry.npmjs.org/@langchain/openai/-/openai-1.5.13.tgz"
@@ -115,6 +122,15 @@
   integrity sha512-rheJlB01iVtrOUzttscutRgLybPH9qR79EyzBEbf1u97ljWyuxQfCwIWK+SjoQTM9O8M7GGLLRBSYE26Jmcoww==
   dependencies:
     js-tiktoken "^1.0.12"
+
+"@mistralai/mistralai@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/@mistralai/mistralai/-/mistralai-2.2.1.tgz"
+  integrity sha512-uKU8CZmL2RzYKmplsU01hii4p3pe4HqJefpWNRWXm1Tcm0Sm4xXfwSLIy4k7ZCPlbETCGcp69E7hZs+WOJ5itQ==
+  dependencies:
+    ws "^8.18.0"
+    zod "^3.25.0 || ^4.0.0"
+    zod-to-json-schema "^3.25.0"
 
 "@napi-rs/canvas-win32-x64-msvc@0.1.80":
   version "0.1.80"
@@ -880,12 +896,12 @@ yaml@^2.9.0:
   resolved "https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz"
   integrity sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==
 
-zod-to-json-schema@^3.23.5:
+zod-to-json-schema@^3.23.5, zod-to-json-schema@^3.25.0:
   version "3.25.2"
   resolved "https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.25.2.tgz"
   integrity sha512-O/PgfnpT1xKSDeQYSCfRI5Gy3hPf91mKVDuYLUHZJMiDFptvP41MSnWofm8dnCm0256ZNfZIM7DSzuSMAFnjHA==
 
-zod@^3.23.8, "zod@^3.25 || ^4.0", "zod@^3.25.28 || ^4", "zod@^3.25.76 || ^4":
+zod@^3.23.8, "zod@^3.25 || ^4.0", "zod@^3.25.0 || ^4.0.0", "zod@^3.25.28 || ^4", "zod@^3.25.76 || ^4":
   version "3.25.76"
   resolved "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz"
   integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
