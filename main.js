@@ -9,10 +9,10 @@ const embeddings = new MistralAIEmbeddings({
    model: "mistral-embed"
 })
 
-const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 500,
-    chunkOverlap: 0
-});
+// const splitter = new RecursiveCharacterTextSplitter({
+//     chunkSize: 500,
+//     chunkOverlap: 0
+// });
 
 const pc = new Pinecone({
     apiKey: process.env.PINECONE_API_KEY
@@ -20,30 +20,30 @@ const pc = new Pinecone({
 
 const index = pc.index('rag-test')
 
-const loader = new PDFLoader("./story.pdf")
+// const loader = new PDFLoader("./story.pdf")
 
-const data = await loader.load()
+// const data = await loader.load()
 
-const chunks = await splitter.splitText(
-    data.map((doc) => doc.pageContent).join("\n")
-)
+// const chunks = await splitter.splitText(
+//     data.map((doc) => doc.pageContent).join("\n")
+// )
 
-const docs = await Promise.all(chunks.map(async (chunk) => {
- const embedding = await embeddings.embedQuery(chunk);
- return {
-    text: chunk,
-    embedding
- }
-}))
+// const docs = await Promise.all(chunks.map(async (chunk) => {
+//  const embedding = await embeddings.embedQuery(chunk);
+//  return {
+//     text: chunk,
+//     embedding
+//  }
+// }))
 
-const result = await index.upsert({
-    records: docs.map((doc, i) => ({
-        id: `doc-${i}`,
-        values: doc.embedding,
-        metadata: {
-            text: doc.text
-        }
-    }))
-})
+// const result = await index.upsert({
+//     records: docs.map((doc, i) => ({
+//         id: `doc-${i}`,
+//         values: doc.embedding,
+//         metadata: {
+//             text: doc.text
+//         }
+//     }))
+// })
 
 console.log(result)
