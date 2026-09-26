@@ -13,10 +13,10 @@ const pc = new Pinecone({
 
 const index = pc.index('rag-test')
 
-const queryEmbeding = await embeddings.embedQuery("Who is Pebble in the story?")
+const queryEmbedding = await embeddings.embedQuery("Who is Pebble in the story?")
 
 const result = await index.query({
-    vector: queryEmbeding,
+    vector: queryEmbedding,
     topK: 2,
     includeMetadata: true
 })
