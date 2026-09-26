@@ -46,4 +46,12 @@ const index = pc.index('rag-test')
 //     }))
 // })
 
-console.log(result)
+const queryEmbeding = await embeddings.embedQuery("Who is Pebble in the story?")
+
+const result = await index.query({
+    vector: queryEmbeding,
+    topK: 2,
+    includeMetadata: true
+})
+
+console.log(JSON.stringify(result));
