@@ -322,3 +322,5 @@ Retrieve Relevant Content
 The next step would be to send the relevant content returned by Pinecone to an AI chat model, which can read that content and generate the final answer for the user.
 
 ## 🎯 What I Learned
+
+- How PDF document loading works
