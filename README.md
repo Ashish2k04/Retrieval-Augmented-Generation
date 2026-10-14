@@ -321,17 +321,3 @@ Retrieve Relevant Content
 
 The next step would be to send the relevant content returned by Pinecone to an AI chat model, which can read that content and generate the final answer for the user.
 
-## 🎯 What I Learned
-
-- How PDF document loading works
-- How `pageContent` is extracted
-- How text chunking works
-- How `chunkSize` and `chunkOverlap` work
-- How embeddings represent text as vectors
-- How to generate embeddings using Mistral AI
-- How vector databases work
-- How to store embeddings in Pinecone
-- How similarity search works
-- Why the same embedding model should be used for documents and queries
-- How to separate document ingestion from querying
-- The basic architecture of a RAG pipeline
